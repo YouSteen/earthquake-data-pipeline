@@ -1,0 +1,9 @@
+{
+	"name": "earthqukes-adf",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3656e69b-e029-4e09-9dcf-ddc6ebcca04d",
+		"tenantId": "203e595c-6431-4237-9780-28f24799c3d3"
+	}
+}
