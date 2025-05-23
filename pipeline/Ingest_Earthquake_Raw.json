@@ -28,6 +28,12 @@
 						"dependencyConditions": [
 							"Succeeded"
 						]
+					},
+					{
+						"activity": "Run_Bronze_Notebook",
+						"dependencyConditions": [
+							"Succeeded"
+						]
 					}
 				],
 				"policy": {
@@ -71,6 +77,26 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Run_Bronze_Notebook",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Pipeline/01_bronze_structured_earthquakes"
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_databricks_earthquake",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
