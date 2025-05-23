@@ -18,6 +18,44 @@
 					"method": "GET",
 					"url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
 				}
+			},
+			{
+				"name": "Write_Raw_to_ADLS",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Get_Earthquake_Data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "RestResource1",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []
