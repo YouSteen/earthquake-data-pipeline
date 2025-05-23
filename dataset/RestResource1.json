@@ -1,10 +1,6 @@
 {
 	"name": "RestResource1",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "ls_usgs_rest",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
