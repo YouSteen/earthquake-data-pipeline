@@ -11,11 +11,11 @@
 		"ls_databricks_earthquake_accessToken": {
 			"value": ""
 		},
-		"ls_adls_earthquake_properties_typeProperties_url": {
-			"value": "https://earthquakedatalakee.dfs.core.windows.net/"
-		},
 		"RestService1_properties_typeProperties_url": {
 			"value": "https://earthquake.usgs.gov"
+		},
+		"ls_adls_earthquake_properties_typeProperties_url": {
+			"value": "https://earthquakedatalakee.dfs.core.windows.net/"
 		},
 		"ls_databricks_earthquake_properties_typeProperties_existingClusterId": {
 			"value": "0516-105427-vewuhucj"

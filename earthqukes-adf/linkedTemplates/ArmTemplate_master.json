@@ -15,13 +15,13 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'ls_databricks_earthquake'"
 		},
-		"ls_adls_earthquake_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://earthquakedatalakee.dfs.core.windows.net/"
-		},
 		"RestService1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://earthquake.usgs.gov"
+		},
+		"ls_adls_earthquake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://earthquakedatalakee.dfs.core.windows.net/"
 		},
 		"ls_databricks_earthquake_properties_typeProperties_existingClusterId": {
 			"type": "string",
@@ -60,11 +60,11 @@
 					"ls_databricks_earthquake_accessToken": {
 						"value": "[parameters('ls_databricks_earthquake_accessToken')]"
 					},
-					"ls_adls_earthquake_properties_typeProperties_url": {
-						"value": "[parameters('ls_adls_earthquake_properties_typeProperties_url')]"
-					},
 					"RestService1_properties_typeProperties_url": {
 						"value": "[parameters('RestService1_properties_typeProperties_url')]"
+					},
+					"ls_adls_earthquake_properties_typeProperties_url": {
+						"value": "[parameters('ls_adls_earthquake_properties_typeProperties_url')]"
 					},
 					"ls_databricks_earthquake_properties_typeProperties_existingClusterId": {
 						"value": "[parameters('ls_databricks_earthquake_properties_typeProperties_existingClusterId')]"
