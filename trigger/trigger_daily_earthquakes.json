@@ -16,7 +16,7 @@
 			"recurrence": {
 				"frequency": "Day",
 				"interval": 1,
-				"startTime": "2025-05-26T15:27:00",
+				"startTime": "2025-05-26T16:03:00",
 				"timeZone": "GTB Standard Time",
 				"schedule": {
 					"minutes": [
