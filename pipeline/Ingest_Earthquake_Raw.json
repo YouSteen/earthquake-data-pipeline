@@ -125,6 +125,33 @@
 					"referenceName": "ls_databricks_earthquake",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Run_Gold_Notebook",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Run_Silver_Notebook",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Pipeline/03_gold_aggregated_earthquakes"
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_databricks_earthquake",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
