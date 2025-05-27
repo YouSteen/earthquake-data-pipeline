@@ -1,3 +1,11 @@
+## Contributors
+
+Thanks to all contributors! 🙌  
+<a href="https://github.com/YouSteen/earthquake-data-pipeline/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=YouSteen/earthquake-data-pipeline" />
+</a>
+
+
 # earthquake-data-pipeline
 
 A complete enterprise-style data pipeline for earthquake data using Databricks and Delta Lake, following the medallion architecture (RAW → BRONZE → SILVER → GOLD). The data is ingested daily from the USGS Earthquake API and processed for analytics, reporting, and future machine learning use cases.
