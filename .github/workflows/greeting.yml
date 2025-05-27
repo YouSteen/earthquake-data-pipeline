@@ -1,0 +1,20 @@
+name: Greeting on new issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on new issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "👋 Thanks for opening this issue! We'll take a look as soon as possible. Meanwhile, please make sure you've provided enough context for others to understand and reproduce the problem."
+            })
