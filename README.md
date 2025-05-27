@@ -20,7 +20,7 @@ The primary goal of this pipeline is to:
 
 ## 🔁 Pipeline Flow
 
-![Pipeline Diagram](A_diagram_illustrates_a_Medallion_data_processing_.png)
+![Pipeline Diagram](diagram/arhitecture_diagram.png)
 
 The pipeline performs the following steps:
 
